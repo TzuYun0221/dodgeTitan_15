@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="objectgame.Land.ImageLand" x="42" y="24">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="util.Resource" x="480" y="50">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="userinterface.GameWindow" x="13" y="391">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="userinterface.GameScreen"
+            endpointName="gameScreen" kind="Simple"/>
+        <Association destinationClassName="userinterface.ConnectMySQL"
+            endpointName="cn" kind="Simple"/>
+        <Communication destinationClassName="userinterface.ConnectMySQL"/>
+        <Communication destinationClassName="userinterface.GameScreen"/>
+    </Class>
+    <Class name="objectgame.Obstacles" x="453" y="410">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="objectgame.Enemy"/>
+        <Association destinationClassName="objectgame.MainChar"
+            endpointName="mainchar" kind="Simple"/>
+        <Communication destinationClassName="objectgame.MainChar"/>
+    </Class>
+    <Class name="objectgame.Land" x="165" y="133">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="objectgame.Land.ImageLand"
+            endpointName="listImage" kind="Simple"/>
+        <Communication destinationClassName="util.Resource"/>
+    </Class>
+    <Class name="objectgame.EnemyManager" x="899" y="152">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="userinterface.GameScreen"
+            endpointName="gameScreen" kind="Simple"/>
+        <Association destinationClassName="objectgame.MainChar"
+            endpointName="mainchar" kind="Simple"/>
+        <Association destinationClassName="objectgame.Enemy"
+            endpointName="enemies" kind="Simple"/>
+        <Communication destinationClassName="util.Resource"/>
+        <Communication destinationClassName="objectgame.Obstacles"/>
+        <Communication destinationClassName="userinterface.GameScreen"/>
+        <Communication destinationClassName="objectgame.Enemy"/>
+        <Communication destinationClassName="objectgame.MainChar"/>
+    </Class>
+    <Class name="objectgame.Enemy" x="633" y="460">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="userinterface.ConnectMySQL" x="16" y="118">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="userinterface.GameScreen" x="245" y="232">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="objectgame.EnemyManager"
+            endpointName="em" kind="Simple"/>
+        <Association destinationClassName="objectgame.MainChar"
+            endpointName="mainchar" kind="Simple"/>
+        <Association destinationClassName="objectgame.Land"
+            endpointName="land" kind="Simple"/>
+        <Association destinationClassName="objectgame.EnemyManager_3"
+            endpointName="em3" kind="Simple"/>
+        <Association destinationClassName="objectgame.EnemyManager_2"
+            endpointName="em2" kind="Simple"/>
+        <Communication destinationClassName="objectgame.Land"/>
+        <Communication destinationClassName="objectgame.EnemyManager"/>
+        <Communication destinationClassName="objectgame.EnemyManager_3"/>
+        <Communication destinationClassName="objectgame.MainChar"/>
+        <Communication destinationClassName="objectgame.EnemyManager_2"/>
+    </Class>
+    <Class name="util.Animation" x="236" y="9">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="objectgame.EnemyManager_3" x="894" y="444">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="userinterface.GameScreen"
+            endpointName="gameScreen" kind="Simple"/>
+        <Association destinationClassName="objectgame.Enemy"
+            endpointName="enemies_3" kind="Simple"/>
+        <Association destinationClassName="objectgame.MainChar"
+            endpointName="mainchar" kind="Simple"/>
+        <Communication destinationClassName="util.Resource"/>
+        <Communication destinationClassName="objectgame.Obstacles"/>
+        <Communication destinationClassName="userinterface.GameScreen"/>
+        <Communication destinationClassName="objectgame.Enemy"/>
+        <Communication destinationClassName="objectgame.MainChar"/>
+    </Class>
+    <Class name="userinterface.Gameoverpanel" x="127" y="302">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="userinterface.ConnectMySQL"
+            endpointName="cn" kind="Simple"/>
+        <Communication destinationClassName="userinterface.ConnectMySQL"/>
+    </Class>
+    <Class name="objectgame.MainChar" x="453" y="124">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="util.Animation"
+            endpointName="charRun" kind="Simple"/>
+        <Communication destinationClassName="util.Animation"/>
+    </Class>
+    <Class name="objectgame.EnemyManager_2" x="896" y="300">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="objectgame.Enemy"
+            endpointName="enemies_2" kind="Simple"/>
+        <Association destinationClassName="userinterface.GameScreen"
+            endpointName="gameScreen" kind="Simple"/>
+        <Association destinationClassName="objectgame.MainChar"
+            endpointName="mainchar" kind="Simple"/>
+        <Communication destinationClassName="util.Resource"/>
+        <Communication destinationClassName="objectgame.Obstacles"/>
+        <Communication destinationClassName="userinterface.GameScreen"/>
+        <Communication destinationClassName="objectgame.Enemy"/>
+        <Communication destinationClassName="objectgame.MainChar"/>
+    </Class>
+</ClassDiagram>
